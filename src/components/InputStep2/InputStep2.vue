@@ -1,6 +1,6 @@
 <template>
   <label :for="id">
-    <img class="img" :src="imgSrc" :alt="id" />
+    <img class="img" :src="getImageUrl()" :alt="id" />
     <h2 class="title">{{ title }}</h2>
     <p class="price">{{ price }}</p>
     <input
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { useMainStore } from '../../store/MainStore/MainStore';
+import { useMainStore } from "../../store/MainStore/MainStore";
 
 const mainStore = useMainStore();
 const props = defineProps([
@@ -26,8 +26,13 @@ const props = defineProps([
   "imgSrc",
   "title",
   "price",
-  "isChecked"
+  "isChecked",
 ]);
+
+function getImageUrl() {
+  // This path must be correct for your file
+  return new URL(`../../assets/images/${props.imgSrc}`, import.meta.url);
+}
 </script>
 
 <style scoped>
