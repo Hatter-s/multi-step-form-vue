@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply outline-none;
+}
+:root {
+    font-family: "Ubuntu", sans-serif;
+    @apply font-normal text-base text-cool-gray;
+}
+
+html {
+    @apply h-[100%];
+}
+
+body {
+    @apply bg-magnolia h-[100%];
+}
+
+#app {
+    @apply h-[100%] ;
+}
+
+.layout {
+    @apply h-[100%] flex flex-col justify-start flex-wrap relative isolate;
+
+    @apply lg:h-auto;
+}

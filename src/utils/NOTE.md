@@ -1,0 +1,3 @@
+The utils folder holds plugin configurations, filters and GlobalComponent registration function. There is no need to write vue filters in every file. For example, you can write different filters and register them throughout the app. You can do anything you want here as the name gives, this is for utilities. You can even ignore the helpers folder and create a file in your utils that has your global functions. You can and should manipulate the folder structure to your convenience.
+
+!!! REMOVE THIS FILE WHEN YOU WORKING !!!

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Ubuntu-Regular.ttf') format('ttf');
+}
+
+/* inter-800 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Ubuntu-Medium.ttf') format('ttf');
+}
+
+/* inter-900 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Ubuntu-Bold.ttf') format('ttf');
+}
