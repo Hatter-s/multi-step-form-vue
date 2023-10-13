@@ -46,7 +46,8 @@ export const useMainStore = defineStore('main', {
         'customizable-profile': 20
       }
     },
-    valueError: ''
+    valueError: '',
+    errorMessage: '', 
   }),
 
   getters: {
@@ -60,19 +61,36 @@ export const useMainStore = defineStore('main', {
 
       if(name === '') {
         this.valueError = 'name';
+        this.errorMessage = 'This field is required';
         return false;
       }
 
       if(email === '') {
         this.valueError = 'email';
+        this.errorMessage = 'This field is required';
         return false;
       }
 
       if(phone === '') {
         this.valueError = 'phone';
+        this.errorMessage = 'This field is required';
         return false;
       }
 
+      if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
+      {
+        this.valueError = 'email';
+        this.errorMessage = 'Invalid email address!';
+        return false;
+      }
+
+      if(!(phone.split(' ').join('').match(/^\d{10}$/))) {
+        this.valueError = 'phone';
+        this.errorMessage = 'Invalid phone number!';
+        return false;
+      }
+
+      this.valueError = '';
       return true;
     },
 

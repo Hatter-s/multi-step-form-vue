@@ -7,7 +7,7 @@
       <div class="input-group">
         <label for="username">
           Name
-          <span v-if="mainStore.valueError === 'name'">This field is required</span>
+          <span v-if="mainStore.valueError === 'name'">{{ mainStore.errorMessage }}</span>
         </label>
         <input type="text" name="username" id="username" placeholder="e.g. Stephen King" v-model="mainStore.formVal.name"
           :class="{ invalid: mainStore.valueError === 'name' }" />
@@ -16,7 +16,7 @@
       <div class="input-group">
         <label for="email">
           Email Address
-          <span v-if="mainStore.valueError === 'email'">This field is required</span>
+          <span v-if="mainStore.valueError === 'email'">{{ mainStore.errorMessage }}</span>
         </label>
         <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com"
           v-model="mainStore.formVal.email" :class="{ invalid: mainStore.valueError === 'email' }" />
@@ -25,9 +25,9 @@
       <div class="input-group">
         <label for="phone">
           Phone Number
-          <span v-if="mainStore.valueError === 'phone'">This field is required</span>
+          <span v-if="mainStore.valueError === 'phone'">{{ mainStore.errorMessage }}</span>
         </label>
-        <input type="tel" name="phone" id="phone" placeholder="e.g. +1 234 567 890" v-model="mainStore.formVal.phone"
+        <input type="tel" name="phone" id="phone" placeholder="e.g. 1 234 567 890" v-model="mainStore.formVal.phone"
           :class="{ invalid: mainStore.valueError === 'phone' }" />
       </div>
     </template>

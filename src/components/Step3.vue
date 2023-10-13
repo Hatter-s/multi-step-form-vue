@@ -82,7 +82,7 @@ const goToStep4 = () => {
   @apply bg-marine-blue px-4 py-3 rounded-md capitalize text-white;
 }
 .go-back {
-  @apply capitalize;
+  @apply capitalize hover:text-marine-blue;
 }
 .go-back:focus {
   text-shadow: 1px 1px 0.1em currentColor;

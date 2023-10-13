@@ -39,6 +39,7 @@ function getImageUrl() {
 label {
   @apply border-light-gray border grid grid-cols-[40px_1fr] grid-rows-2 gap-x-4 px-4 py-4 rounded-lg mb-4 cursor-pointer;
   @apply lg:grid-rows-[80px] lg:grid-cols-[110px];
+  @apply hover:border-purplish-blue;
 
   .input {
     @apply hidden;
